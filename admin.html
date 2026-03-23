@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h2>Admin Dashboard</h2>
+
+    <h3>Users</h3>
+    {% for user in users %}
+        <p>{{ user }}</p>
+    {% endfor %}
+
+    <h3>Jobs</h3>
+    {% for job in jobs %}
+        <p>{{ job }}</p>
+    {% endfor %}
+
+    <a href="/logout">Logout</a>
+</body>
+</html>

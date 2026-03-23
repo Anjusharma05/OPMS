@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jobs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h2>Available Jobs</h2>
+
+    {% for job in jobs %}
+        <p><b>{{ job[1] }}</b> - {{ job[2] }}</p>
+        <a href="/apply/{{ job[0] }}">Apply</a>
+        <hr>
+    {% endfor %}
+</body>
+</html>
